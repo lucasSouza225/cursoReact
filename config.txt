@@ -7,5 +7,9 @@ npm i
 -Para gerar id aleatorios 
 npm install uuid
 
+-Para poder usar o Router
+npm install react-router-dom
+
+
 -- Para fazer funcionar o projeto
 npm run dev
