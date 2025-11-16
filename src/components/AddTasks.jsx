@@ -16,6 +16,10 @@ function AddTasks({onAddTaskSubmit}) {
 
             <button
             onClick={() => {
+                // verificação para ver se os campos estão preenchidos
+                if (!title.trim() || !description.trim()) {
+                    return alert("Preencha os dados corrtamente.")
+                }
                 onAddTaskSubmit(title, description);
                 setTitle("");
                 setDescription("");

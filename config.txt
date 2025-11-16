@@ -4,5 +4,8 @@ npm create vite@5.5.2 .
 
 npm i
 
+-Para gerar id aleatorios 
+npm install uuid
+
 -- Para fazer funcionar o projeto
 npm run dev
