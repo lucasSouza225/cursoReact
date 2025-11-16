@@ -28,18 +28,6 @@ function App() {
       title: "Aprender Banco de Dados",
       description: "Estudar SQL e modelos de dados para fortalecer o conhecimento no back-end.",
       isCompleted: false
-    },
-    {
-      id: 5,
-      title: "Fazer Exercícios de Lógica",
-      description: "Resolver problemas de lógica para melhorar o raciocínio na programação.",
-      isCompleted: false
-    },
-    {
-      id: 6,
-      title: "Desenvolver um Projeto Pessoal",
-      description: "Criar um projeto simples para praticar HTML, CSS e JavaScript.",
-      isCompleted: false
     }
   ]);
 
@@ -59,12 +47,24 @@ function App() {
     );
   }
 
+  function onAddTaskSubmit(title, description) {
+    const newTask = {
+      id: tasks.length + 1,
+      title: title,
+      description: description,
+      isCompleted: false,
+    }
+
+    setTasks([...tasks, newTask])
+
+  } 
+
   return (
     <div className="w-screen h-screen bg-blue-300 flex justify-center p-6" >
       <div className="w-[500px] space-y-4">
         <h1 className="text-3xl text-gray-950 font-bold text-center">Gerenciador de Tarefas</h1>
 
-        <AddTasks addTask={setTasks} />
+        <AddTasks addTask={setTasks} onAddTaskSubmit={onAddTaskSubmit} />
 
         <Tasks
           tasks={tasks}
