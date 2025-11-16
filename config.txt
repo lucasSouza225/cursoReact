@@ -1,0 +1,6 @@
+npm create vite@5.5.2 .
+
+npm i
+
+-- Para fazer funcionar o projeto
+npm run dev
